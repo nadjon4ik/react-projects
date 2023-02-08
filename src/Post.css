@@ -1,39 +1,85 @@
 .Post {
-  text-align: center;
-}
-
-.Post-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .Post-logo {
-    animation: Post-logo-spin infinite 20s linear;
-  }
+  width: fit-content;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #243447;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .Post-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+.Post-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.Post-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Post-data {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: #575e66;
+}
+
+.Post-data>img.check {
+  width: 30px;
   color: white;
 }
 
-.Post-link {
-  color: #61dafb;
+.Post-name, .nickname, .Post-data>img.check {
+  margin-right: 12px;
 }
 
-@keyframes Post-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.nickname, .data {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.Post-section {
+  margin-left: 64px;
+}
+
+.Post-section>p {
+  margin: 10px 0px 10px;
+  text-align: left;
+  font-size: 1.15em;
+}
+
+.Post-section>img {
+  border-radius: 35px;
+}
+
+.Post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Post-footer div {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #575e66;
+  font-weight: bold;
+}
+
+.Post-footer div:hover {
+  cursor: pointer;
+}
+
+.Post-footer img {
+  width: 20px;
+  margin-right: 5px;
 }

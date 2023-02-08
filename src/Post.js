@@ -1,40 +1,34 @@
-import logo from './logo.svg';
+
+import arrows from './assets/images/arrows-retweet.png'
+import check from './assets/images/badge-check.png'
+import comment from './assets/images/comment.png'
+import download from './assets/images/download.png'
+import heart from './assets/images/heart.png'
+
 import './Post.css';
 
-const ANAKIN_IMAGE =
-  'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg';
+function Post(props) {
+  const {name,photo,nickname,content,image,date,comments,retweet,likes} = props.data;
+  
 
-const RAY_IMAGE =
-  'https://specials-images.forbesimg.com/imageserve/5e63b3c8e1e617000759130e/960x0.jpg?fit=scale';
-
-const dataPosts = [
-  {
-    name: 'Anakin skywalker',
-    photo: ANAKIN_IMAGE,
-    nickname: '@dart_vader',
-    content: 'WTF? Who is Ray? Why she is Skywalker? Luke...?',
-    image: RAY_IMAGE,
-    date: '26 февр.',
-  },
-];
-
-function Post() {
   return (
     <div className="Post">
       <header className="Post-header">
-        <img src={logo} className="Post-logo" alt="logo" />
-        <p>
-          Edit <code></code> and save to reload.
-        </p>
-        <a
-          className="Post-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={photo} className="Post-logo" alt="ANAKIN_IMAGE" />
+        <span className='Post-name'>{name}</span>
+        <div className='Post-data'><img src={check} className="check"/><span className="nickname">{nickname}</span ><span className="data">{date}</span></div>
       </header>
+      <div className='Post-section'>
+      <p>{content}</p>
+      <img src={image} className="Ray-Image" alt="logo" />
+      <div className='Post-footer'>
+        <div><img src={comment}/><span>{comments}</span></div>
+        <div><img src={arrows}/><span>{retweet}</span></div>
+        <div><img src={heart}/><span>{likes}</span></div>
+        <div><img src={download}/><span></span></div>
+      </div>
+      </div>
+      
     </div>
   );
 }
